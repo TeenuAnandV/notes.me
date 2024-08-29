@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f3f3f3;
+    position: relative;
+}
+
+.loader-container {
+    position: relative; /* Required for absolute positioning of child elements */
+    width: 100%;
+    max-width: 400px;
+}
+
+.loading-text {
+    font-size: 25px;
+    font-family: "Playwrite HR", cursive;
+    text-align:center;
+    color: #555;
+    margin-bottom:10% ;
+    position: absolute; /* Enables free positioning */
+    top: -60px; /* Adjust this value to move the text vertically above the loader bar */
+    left: 28%; /* Centers the text horizontally */
+   
+}
+
+.loader-bar {
+    width: 150%;
+    height: 8px;
+    background-color: rgb(230, 176, 176);
+    border-radius: 15px;
+    overflow: hidden;
+    position: absolute;
+    right: -125px;
+    top: 250%;
+}
+
+.loader-progress {
+    height: 100%;
+    width: 0;
+    background-color: black;
+    border-radius: 15px;
+    animation: load 3s infinite;
+}
+
+@keyframes load {
+    0% { width: 0; }
+    50% { width: 100%; }
+    100% { width: 0; }
+}

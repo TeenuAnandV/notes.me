@@ -1,0 +1,261 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.sidebar {
+    height: 100%;
+    width: 150px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color:white;
+    padding-top: 20px;
+    border-top-right-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Dark mode styles */
+body.dark-mode {
+    background-color:#0e0c0c;
+    color:white;
+}
+
+body.dark-mode .sidebar {
+    background-color:black;
+    box-shadow: 0 0 10px rgba(49, 45, 45, 0.5); /* Darker shadow */
+}
+
+
+.sidebar img {
+    width: 60px;
+    height: auto;
+    margin: 20px ;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+body.dark-mode .sidebar img {
+    filter: invert(1) brightness(0.8); /* Invert and adjust brightness for dark mode */
+}
+
+.search-container {
+    margin-left: 170px; /* Adjust according to sidebar width */
+    padding: 20px;
+}
+
+.search-container input {
+    width: 200px;
+    padding: 10px;
+}
+
+
+/* Style for the home image */
+.home img {
+    width: 35px;
+    height: auto;
+    position: fixed;
+    left: 60px; /* Adjust for alignment */
+    bottom: 50%; /* Vertical positioning */
+    z-index: 1; /* Ensure it is above other elements if needed */
+}
+
+/* Style for the addnew image */
+.addnew img {
+    width: 35px;
+    height: auto;
+    position: fixed;
+    left: 60px; /* Align with other icons */
+    bottom: 35%; /* Vertical positioning */
+    z-index: 2; /* Ensure it is above other elements if needed */
+}
+
+/* Style for the exit image */
+.exit img {
+    size: 5px;
+    width: 35px;
+    height: auto;
+    position: fixed;
+    left: 63px; /* Align with other icons */
+    bottom: 5%; /* Vertical positioning */
+    z-index: 3; /* Ensure it is above other elements if needed */
+}
+
+.delete img{
+    size: 5px;
+    width: 35px;
+    height: auto;
+    position: fixed;
+    left: 60px; /* Align with other icons */
+    bottom: 20%; /* Vertical positioning */
+    z-index: 3; /* Ensure it is above other elements if needed */
+}
+
+#deleteimg.drag-over {
+    background-color: rgba(255, 0, 0, 0.7); /* Darker red to indicate hover */
+    border: 2px dashed white; /* Optional: add a border to indicate drop target */
+}
+
+
+
+
+ .home img:hover, .addnew img:hover, .exit img:hover,.delete img:hover {
+    transform: scale(1.2); /* Slightly increase the size */
+    filter: brightness(1.2); /* Brighten the icon */
+}
+
+/* Dark mode styles */
+body.dark-mode .home img, 
+body.dark-mode .addnew img, 
+body.dark-mode .exit img {
+    filter: invert(1) brightness(1.2); /* Invert colors to suit dark mode */
+}
+
+body.dark-mode .icon {
+    color: #000000; /* Gold color for icons in dark mode */
+}
+
+body.dark-mode .icon:hover {
+    color: #FFD700; /* Keep the hover color consistent with dark mode */
+}
+
+
+/* moon icon style */
+.container {
+    position: fixed;
+    top: -15px;
+    left: 1125px;
+    height: 100vh; /* Full viewport height */
+}
+
+.icon {
+    font-size: 2.6rem; /* Adjust size of the icon */
+    transition: transform 0.2s, color 0.2s;
+}
+
+/* Hover effect */
+.icon:hover {
+    transform: scale(1.2); /* Slightly increase the size */
+    color: #FFD700; /* Change color on hover */
+}
+
+
+.welcometext {
+    position: absolute;
+    left: 220px;
+    bottom:380px;
+    font-family: "Playwrite HR", cursive;
+}
+
+.welcometext h1 {
+    font-size: 2rem; /* Larger font size for the heading */
+    margin-bottom: 1rem; /* Space below the heading */
+    color: #333; /* Dark color for text */
+}
+
+.welcometext p {
+    font-size: 1rem; /* Slightly larger font size for the paragraph */
+    color: #666; /* Lighter color for text */
+}
+
+.search-container {
+    margin-top: 5px;
+    border-radius: 15px;
+}
+
+.search-container input[type="text"] {
+    text-align: left;
+    font-family: "Playwrite HR", cursive;
+    width: 700px;
+    height: 20px;
+    font-size: 16px;
+    border: transparent;
+    border-radius: 10px;
+}
+
+
+.search-container input::placeholder {
+    color:black;
+    font-style: "Playwrite HR", cursive;
+    text-align: auto;  
+}
+
+/* Dark mode styles */
+body.dark-mode .welcometext h1 {
+    color: #fff; /* White color for text */
+}
+
+body.dark-mode .welcometext p {
+    color: #ccc; /* Light gray color for text */
+}
+
+body.dark-mode .search-container input[type="text"] {
+    background-color: #333; /* Dark background for input field */
+    color: white; /* White text color for input field */
+    border: 1px solid #444; /* Border to differentiate the input */
+    text-align: auto; /* Center align the text in the input field */
+}
+
+body.dark-mode .search-container input::placeholder {
+    color: white; /* White color for placeholder text */
+    font-family: "Playwrite HR", cursive; /* Use font-family for custom fonts */
+}
+
+.note-container {
+    position: relative;
+    left: 200px;
+    top: 150px;
+    padding-bottom: 2%;
+    max-height: 70vh; 
+    overflow:hidden;
+    max-width: 900px; /* Add max-width */
+}
+
+
+.note-container.dragging {
+    cursor: grabbing; /* Cursor style when dragging */
+}
+
+
+.note-title {
+    width: 100%;
+    padding: 8px;
+    font-size: 18px;
+    border: 1px solid #ccc;
+    margin-bottom: 4px;
+    box-sizing: border-box;
+}
+
+.note-input {
+    font-family: "Playwrite HR", cursive;
+    width: 280px;
+    height: 230px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    background-color: rgb(195, 232, 195);
+    border-radius: 5px;
+    padding: 20px 15px 20px 15px; /* top right bottom left */
+    resize: auto;
+    overflow-y:auto; /* Enable scrollbar for overflow */
+    font-size: 16px; /* Default font size */
+}
+
+.slider-container {
+    margin: 10px 0;
+}
+
+.note-input::placeholder {
+    color:black;
+    font-style: "Playwrite HR", cursive;
+    text-align: auto;  
+}
+
+body.dark-mode .note-input::placeholder {
+    color:black;
+}
+
+
+
+
+

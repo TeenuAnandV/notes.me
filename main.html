@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes App</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!-- Sidebar with an image -->
+    <div class="sidebar">
+        <img src="logopen.png" alt="Sidebar Image">
+    </div>
+
+    <!-- Search container with input -->
+    <div class="search-container">
+        <input id="search-input" type="text" placeholder=" 🔍 Search Notes..">
+    </div>
+
+    <!-- Home icon -->
+    <div class="home">
+        <img id="homeImage" src="home.png" alt="Home Icon">
+    </div>
+
+    <!-- Add new button -->
+    <div class="addnew">
+        <img id="addnew" src="addnew.png" alt="Add New Note">
+    </div>
+
+     <!-- exit to login page button -->
+     <div class="exit">
+        <img id="exitimg" img src="exit.png" alt="Exit Icon">
+    </div>
+
+    <!-- delete icon -->
+     <div class="delete">
+        <img id="deleteimg" img src="delete.png" alt="delete Icon">
+    </div>
+
+
+    <!-- Container for new notes -->
+    <div id="notes-container"></div> <!-- Fixed ID to match JS -->
+
+    <!-- Dark mode toggle -->
+    <div class="container">
+        <h1 class="icon" onclick="toggleDarkMode()">🌙</h1>
+    </div>
+    
+    <div class="welcometext">
+        <h1>Hello!👋🏻</h1>
+        <p>All your Notes Here, in one place!</p>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
